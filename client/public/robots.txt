@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /files
+
+Sitemap: https://mobtkir.sa/sitemap.xml
