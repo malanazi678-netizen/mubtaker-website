@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://mobtkir.sa/</loc>
+    <image:image><image:loc>https://mobtkir.sa/manus-storage/mubtaker-hero_0b389d39.webp</image:loc><image:title>الشخصية السعودية الرئيسية في هوية مبتكر</image:title><image:caption>وكالة مبتكر للتسويق الإبداعي في السعودية</image:caption></image:image>
+    <image:image><image:loc>https://mobtkir.sa/manus-storage/mubtaker-coffee_3cc88297.webp</image:loc><image:title>الشخصية السعودية تشرب القهوة</image:title><image:caption>خدمات التسويق الرقمي وصناعة المحتوى</image:caption></image:image>
+    <image:image><image:loc>https://mobtkir.sa/manus-storage/mubtaker-ecommerce_ec645745.webp</image:loc><image:title>حلول التجارة الإلكترونية</image:title><image:caption>إنشاء وتطوير المتاجر الإلكترونية في السعودية</image:caption></image:image>
+    <image:image><image:loc>https://mobtkir.sa/manus-storage/mubtaker-marketing_5de9cb33.webp</image:loc><image:title>صناعة المحتوى والحملات الإعلانية</image:title><image:caption>التسويق والحملات الإبداعية من مبتكر</image:caption></image:image>
+    <image:image><image:loc>https://mobtkir.sa/manus-storage/mubtaker-results_a498817e.webp</image:loc><image:title>نتائج ونمو الأعمال</image:title><image:caption>لوحة نتائج ومؤشرات التسويق</image:caption></image:image>
+    <image:image><image:loc>https://mobtkir.sa/manus-storage/mubtaker-final-cta_f54089bf.webp</image:loc><image:title>جلسة مبتكر السعودية</image:title><image:caption>تواصل مع وكالة مبتكر</image:caption></image:image>
+    <priority>1.0</priority><changefreq>weekly</changefreq>
   </url>
+  <url><loc>https://mobtkir.sa/services/digital-marketing</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://mobtkir.sa/services/ecommerce</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://mobtkir.sa/services/campaign-management</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://mobtkir.sa/services/content-creation</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://mobtkir.sa/services/seo</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://mobtkir.sa/services/brand-identity</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://mobtkir.sa/services/visual-production</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
 </urlset>

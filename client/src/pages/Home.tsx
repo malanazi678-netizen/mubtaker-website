@@ -23,17 +23,17 @@ import {
   X,
 } from "lucide-react";
 
-const LOGO = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663392323714/awOJYiKKunlkJuOx.png";
-const HERO_IMG = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663392323714/EhJycotaHsKUEQHI.png";
-const SERVICES_COFFEE_IMG = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663392323714/KlbzMxxxpgaeeFFG.png";
-const ECOMMERCE_IMG = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663392323714/tAbBhGzDRHRzBFBX.png";
-const MARKETING_IMG = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663392323714/VMomBAGZOymOQePj.png";
-const RESULTS_IMG = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663392323714/JUUVUhKVffwzHbUP.png";
-const FINAL_CTA_IMG = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663392323714/fVpcQHbQZfuEuKIn.png";
+const LOGO = "/manus-storage/mubtaker-logo_c062ed09.webp";
+const HERO_IMG = "/manus-storage/mubtaker-hero_0b389d39.webp";
+const SERVICES_COFFEE_IMG = "/manus-storage/mubtaker-coffee_3cc88297.webp";
+const ECOMMERCE_IMG = "/manus-storage/mubtaker-ecommerce_ec645745.webp";
+const MARKETING_IMG = "/manus-storage/mubtaker-marketing_5de9cb33.webp";
+const RESULTS_IMG = "/manus-storage/mubtaker-results_a498817e.webp";
+const FINAL_CTA_IMG = "/manus-storage/mubtaker-final-cta_f54089bf.webp";
 const WHATSAPP_NUMBER = "966559999236";
-const MAROOF_LOGO = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663392323714/jNHKLCjgXLOyOuDx.png";
-const MINISTRY_LOGO = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663392323714/FYiOACPDdZEkDJqj.png";
-const VERIFICATION_LOGO = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663392323714/WqSTsfwGzJLgiKwd.png";
+const MAROOF_LOGO = "/manus-storage/mubtaker-maroof_39c3ddf4.webp";
+const MINISTRY_LOGO = "/manus-storage/mubtaker-ministry_0d5ab504.webp";
+const VERIFICATION_LOGO = "/manus-storage/mubtaker-verification_4d71f33d.webp";
 
 const whatsappHref = (message = "مرحباً، أرغب بالبدء مع مبتكر") =>
   `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
@@ -210,6 +210,8 @@ export default function Home() {
         <div className="service-tabs section-shell" role="tablist" aria-label="خدمات مبتكر">{services.map((service, index) => { const Icon = service.icon; const selected = activeService === index; return <button key={service.title} role="tab" aria-selected={selected} onClick={() => setActiveService(index)} className={`service-tab ${selected ? "is-active" : ""}`} style={{ "--tab-color": service.color } as React.CSSProperties}><span className="service-tab-icon"><Icon size={18} /></span><span>{service.title}</span><ChevronLeft size={15} /></button>; })}</div>
       </section>
 
+      <section aria-label="خدمات شركة مبتكر للتسويق الرقمي والتجارة الإلكترونية في السعودية" className="service-seo-links section-shell"><div className="service-seo-links-heading"><div className="section-eyebrow">خدمات متخصصة في السعودية</div><h2>خدمات التسويق الرقمي والتجارة الإلكترونية</h2><p>مبتكر شركة تسويق سعودية في الرياض. تعرّف على حلولنا واختر المسار الأقرب لمرحلة مشروعك.</p></div><div className="service-seo-links-grid"><a href="/services/digital-marketing">التسويق الرقمي <span>←</span></a><a href="/services/ecommerce">إنشاء متجر إلكتروني <span>←</span></a><a href="/services/campaign-management">إدارة الحملات الإعلانية <span>←</span></a><a href="/services/content-creation">صناعة المحتوى <span>←</span></a><a href="/services/seo">تحسين محركات البحث SEO <span>←</span></a><a href="/services/brand-identity">تصميم الهوية البصرية <span>←</span></a><a href="/services/visual-production">الإنتاج المرئي <span>←</span></a></div></section>
+
       <section id="ecommerce" className="creative-section ecommerce-section" ref={ecommerceSection.ref}>
         <div className="section-shell ecommerce-layout">
           <div className="ecommerce-visual" style={{ opacity: ecommerceSection.visible ? 1 : 0, transform: ecommerceSection.visible ? "none" : "translateX(26px)", transition: "all 700ms cubic-bezier(0.23,1,0.32,1)" }}><div className="commerce-ring" /><img src={ECOMMERCE_IMG} alt="الشخصية السعودية جالسة وسط كراتين الشحن وتمسك هاتفاً يعرض متجراً إلكترونياً" loading="lazy" decoding="async" /><div className="commerce-float bag"><ShoppingBag size={17} /><span>Shopping Bag</span></div><div className="commerce-float order"><Bell size={16} /><span>طلب جديد</span></div><div className="commerce-float cart"><CreditCard size={16} /><span>Cart</span></div><div className="commerce-float sale"><TrendingUp size={16} /><span>Sales</span></div></div>
@@ -249,7 +251,7 @@ export default function Home() {
           </Reveal>
           <div className="results-visual" style={{ opacity: resultsSection.visible ? 1 : 0, transform: resultsSection.visible ? "none" : "translateX(-22px)", transition: "all 700ms cubic-bezier(0.23,1,0.32,1) 120ms" }}>
             <img src={RESULTS_IMG} alt="الشخصية السعودية واقفة وتحمل جهازاً لوحياً لمتابعة النتائج" className="results-character" loading="lazy" decoding="async" />
-                          <div className="results-work-strip" aria-label="أعمال مختارة">{caseStudies.map((work) => <div className="results-work" key={work.title}><img src={work.image} alt="" loading="lazy" decoding="async" /><div><b>{work.title}</b><small>{work.tag}</small></div></div>)}</div>
+                          <div className="results-work-strip" aria-label="أعمال مختارة">{caseStudies.map((work) => <div className="results-work" key={work.title}><img src={work.image} alt={`${work.title} - ${work.tag}`} loading="lazy" decoding="async" /><div><b>{work.title}</b><small>{work.tag}</small></div></div>)}</div>
 
           </div>
         </div>
