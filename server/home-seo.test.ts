@@ -7,7 +7,7 @@ describe("home page SEO limits", () => {
     const html = readFileSync(resolve(import.meta.dirname, "../client/index.html"), "utf8");
     const description = html.match(/<meta name="description" content="([^"]+)"/)?.[1] ?? "";
     const keywords = html.match(/<meta name="keywords" content="([^"]+)"/)?.[1] ?? "";
-    const keywordCount = keywords.split("،").map((item) => item.trim()).filter(Boolean).length;
+    const keywordCount = keywords.split(/[,،]/).map((item) => item.trim()).filter(Boolean).length;
 
     expect(description.length).toBeGreaterThanOrEqual(50);
     expect(description.length).toBeLessThanOrEqual(160);
