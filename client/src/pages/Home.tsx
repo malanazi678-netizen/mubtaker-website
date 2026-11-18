@@ -23,17 +23,18 @@ import {
   X,
 } from "lucide-react";
 
-const LOGO = "/manus-storage/mubtaker-logo_c062ed09.webp";
-const HERO_IMG = "/manus-storage/mubtaker-hero_0b389d39.webp";
-const SERVICES_COFFEE_IMG = "/manus-storage/mubtaker-coffee_3cc88297.webp";
-const ECOMMERCE_IMG = "/manus-storage/mubtaker-ecommerce_ec645745.webp";
-const MARKETING_IMG = "/manus-storage/mubtaker-marketing_5de9cb33.webp";
-const RESULTS_IMG = "/manus-storage/mubtaker-results_a498817e.webp";
-const FINAL_CTA_IMG = "/manus-storage/mubtaker-final-cta_f54089bf.webp";
+const CDN = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663392323714";
+const LOGO = `${CDN}/CQBbZwvuxWBttOKv.webp`;
+const HERO_IMG = `${CDN}/NlunvqqzBLyvJMOl.webp`;
+const SERVICES_COFFEE_IMG = `${CDN}/zFhQsonozKmyHwED.webp`;
+const ECOMMERCE_IMG = `${CDN}/HgHjlzmhATdVFKdu.webp`;
+const MARKETING_IMG = `${CDN}/RStIHmLEJWKsgNRk.webp`;
+const RESULTS_IMG = `${CDN}/RbaCymiFBiKhqmXT.webp`;
+const FINAL_CTA_IMG = `${CDN}/lbELkjsjBIqpwCJA.webp`;
 const WHATSAPP_NUMBER = "966559999236";
-const MAROOF_LOGO = "/manus-storage/mubtaker-maroof_39c3ddf4.webp";
-const MINISTRY_LOGO = "/manus-storage/mubtaker-ministry_0d5ab504.webp";
-const VERIFICATION_LOGO = "/manus-storage/mubtaker-verification_4d71f33d.webp";
+const MAROOF_LOGO = `${CDN}/dpalkIMsfmEmnVUY.webp`;
+const MINISTRY_LOGO = `${CDN}/vgDYWEomTBijLnsR.webp`;
+const VERIFICATION_LOGO = `${CDN}/QOjLxTqmTiItGzsq.webp`;
 
 const whatsappHref = (message = "مرحباً، أرغب بالبدء مع مبتكر") =>
   `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
@@ -71,11 +72,11 @@ const caseStudies = [
 ];
 
 const paymentBrands = [
-  { name: "تابي", mark: "tabby", className: "payment-brand-tabby" },
-  { name: "تمارا", mark: "tamara", className: "payment-brand-tamara" },
-  { name: "مدفوع", mark: "مدفوع", className: "payment-brand-madfu" },
-  { name: "Visa", mark: "VISA", className: "payment-brand-visa" },
-  { name: "مدى", mark: "mada", className: "payment-brand-mada" },
+  { name: "Tabby", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663392323714/vmXBnoKugCiMAAYj.svg", className: "payment-brand-tabby" },
+  { name: "Tamara", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663392323714/JUgvFzMphsJsgQOE.png", className: "payment-brand-tamara" },
+  { name: "مدفوع", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663392323714/HEPiDhVxnGmeiZop.svg", className: "payment-brand-madfu" },
+  { name: "Visa", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663392323714/EWMENrnaPJDAXsGS.svg", className: "payment-brand-visa" },
+  { name: "mada", logo: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663392323714/kEbqDXojiqjdlRWq.svg", className: "payment-brand-mada" },
 ];
 
 const packages = [
@@ -158,13 +159,11 @@ export default function Home() {
               return <a key={item} href={hrefs[index]} style={{ fontSize: 14, fontWeight: 700, color: scrolled ? "#374151" : "rgba(244,242,255,0.92)", textDecoration: "none", transition: "color 0.2s" }} onMouseEnter={(e) => (e.currentTarget.style.color = "#ffbfd6")} onMouseLeave={(e) => (e.currentTarget.style.color = scrolled ? "#374151" : "rgba(244,242,255,0.92)")}>{item}</a>;
             })}
           </div>
-          <a href="/files" className="hidden md:block" style={{ fontSize: 13, fontWeight: 800, color: scrolled ? "#6B9FD4" : "#e1d5ff", textDecoration: "none" }}>مساحة الملفات</a>
           <a href={whatsappHref()} className="hidden md:block" style={{ background: "linear-gradient(135deg, #6B9FD4, #D4789F)", color: "white", borderRadius: 50, padding: "10px 24px", fontSize: 14, fontWeight: 800, textDecoration: "none", boxShadow: "0 4px 16px rgba(107,159,212,0.3)" }}>ابدأ مشروعك</a>
           <button className="md:hidden" aria-label={menuOpen ? "إغلاق القائمة" : "فتح القائمة"} onClick={() => setMenuOpen(!menuOpen)} style={{ background: "none", border: "none", padding: 8, color: scrolled ? dark : "white" }}>{menuOpen ? <X size={24} /> : <Menu size={24} />}</button>
         </div>
         {menuOpen && <div style={{ background: "rgba(248,246,255,0.96)", backdropFilter: "blur(16px)", padding: "1rem 1.5rem", display: "flex", flexDirection: "column", gap: "1rem" }}>
           {["الرئيسية", "الخدمات", "أعمالنا", "من نحن", "تواصل معنا"].map((item, index) => <a key={item} href={["#hero", "#services", "#marketing", "#vision", "#contact"][index]} onClick={() => setMenuOpen(false)} style={{ fontSize: 14, fontWeight: 700, color: dark, textDecoration: "none" }}>{item}</a>)}
-          <a href="/files" style={{ color: "#6B9FD4", fontSize: 14, fontWeight: 800, textDecoration: "none", textAlign: "center" }}>مساحة الملفات</a>
           <a href={whatsappHref()} style={{ background: "linear-gradient(135deg, #6B9FD4, #D4789F)", color: "white", borderRadius: 50, padding: "10px 24px", fontSize: 14, fontWeight: 800, textDecoration: "none", textAlign: "center" }}>ابدأ مشروعك</a>
         </div>}
       </nav>
@@ -196,25 +195,36 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="services" className="creative-section coffee-section" ref={servicesSection.ref}>
-        <div className="section-shell coffee-layout">
-          <Reveal visible={servicesSection.visible} className="section-copy">
-            <div className="section-eyebrow">01 · الخدمات والقهوة</div>
-            <h2>خذ لك فنجال..<br /><span>وخلّ التسويق علينا.</span></h2>
-            <p>من الاستراتيجية والهوية إلى المتجر والحملات الإعلانية، مُبتكر يجمع كل ما يحتاجه مشروعك للنمو في مكان واحد.</p>
-            <div className="service-detail"><div className="service-detail-icon" style={{ background: `${services[activeService].color}22`, color: services[activeService].color }}>{(() => { const Icon = services[activeService].icon; return <Icon size={24} />; })()}</div><div><strong>{services[activeService].title}</strong><span>{services[activeService].desc}</span></div></div>
-            <a href={whatsappHref(`مرحباً، أحتاج تفاصيل خدمة ${services[activeService].title}`)} className="text-cta">خلّنا نبدأ <ArrowLeft size={16} /></a>
+      <section id="services" className="services-showcase" ref={servicesSection.ref} onWheel={(event) => {
+        if (Math.abs(event.deltaY) < 12) return;
+        const next = event.deltaY > 0 ? Math.min(activeService + 1, services.length - 1) : Math.max(activeService - 1, 0);
+        if (next !== activeService) {
+          event.preventDefault();
+          setActiveService(next);
+        }
+      }}>
+        <div className="services-showcase-inner">
+          <div className="services-showcase-visual" style={{ opacity: servicesSection.visible ? 1 : 0, transform: servicesSection.visible ? "none" : "translateY(22px)", transition: "opacity 700ms cubic-bezier(0.23,1,0.32,1), transform 700ms cubic-bezier(0.23,1,0.32,1)" }}>
+            <div className="services-showcase-orbit" aria-hidden="true" />
+            <div className="services-showcase-index">0{activeService + 1}</div>
+            <div className="services-showcase-glow" style={{ background: `radial-gradient(circle, ${services[activeService].color}55, transparent 68%)` }} />
+            <img key={`service-image-${activeService}`} src={[SERVICES_COFFEE_IMG, ECOMMERCE_IMG, RESULTS_IMG, FINAL_CTA_IMG, MARKETING_IMG, HERO_IMG, LOGO][activeService]} alt={`الشخصية السعودية تمثل خدمة ${services[activeService].title} في مبتكر`} loading="eager" decoding="async" />
+            <span className="services-showcase-caption"><i /> مبتكر · نصنع حضوراً يعلق</span>
+          </div>
+          <Reveal visible={servicesSection.visible} className="services-showcase-content">
+            <div className="services-showcase-eyebrow"><span /> ماذا نقدم لك؟ <b>0{activeService + 1} / 07</b></div>
+            <h2 key={`service-heading-${activeService}`}>التسويق الرقمي<br /><em>نبدأ من الفكرة.</em></h2>
+            <p>استراتيجية رقمية واضحة توصل علامتك إلى جمهورها الصحيح وتحوّل حضورك إلى نمو.</p>
+            <div className="services-showcase-menu" role="tablist" aria-label="خدمات مبتكر">{services.map((service, index) => { const Icon = service.icon; return <button key={service.title} type="button" role="tab" aria-selected={activeService === index} className={activeService === index ? "is-active" : ""} onClick={() => setActiveService(index)} style={{ "--service-accent": service.color } as React.CSSProperties}><span className="service-showcase-number">0{index + 1}</span><Icon size={19} /><strong>{service.title}</strong><ArrowUpLeft size={17} /></button>; })}</div>
+            <a className="services-showcase-cta" href={whatsappHref(`مرحباً، أحتاج تفاصيل خدمة ${services[activeService].title}`)}>ابدأ مع هذه الخدمة <ArrowLeft size={17} /></a>
           </Reveal>
-          <div className="coffee-visual" style={{ opacity: servicesSection.visible ? 1 : 0, transform: servicesSection.visible ? "none" : "translateX(-26px)", transition: "all 700ms cubic-bezier(0.23,1,0.32,1) 120ms" }}><div className="coffee-halo" /><img src={SERVICES_COFFEE_IMG} alt="الشخصية السعودية تشرب القهوة بجانب اللابتوب والدلة" loading="lazy" decoding="async" /><div className="coffee-stamp">على كيفك<br /><b>نضبطها</b></div></div>
         </div>
-        <div className="service-tabs section-shell" role="tablist" aria-label="خدمات مبتكر">{services.map((service, index) => { const Icon = service.icon; const selected = activeService === index; return <button key={service.title} role="tab" aria-selected={selected} onClick={() => setActiveService(index)} className={`service-tab ${selected ? "is-active" : ""}`} style={{ "--tab-color": service.color } as React.CSSProperties}><span className="service-tab-icon"><Icon size={18} /></span><span>{service.title}</span><ChevronLeft size={15} /></button>; })}</div>
+        <div className="services-showcase-next"><span>اسحب لاكتشاف المسارات</span><ArrowLeft size={18} /></div>
       </section>
-
-      <section aria-label="خدمات شركة مبتكر للتسويق الرقمي والتجارة الإلكترونية في السعودية" className="service-seo-links section-shell"><div className="service-seo-links-heading"><div className="section-eyebrow">خدمات متخصصة في السعودية</div><h2>خدمات التسويق الرقمي والتجارة الإلكترونية</h2><p>مبتكر شركة تسويق سعودية في الرياض. تعرّف على حلولنا واختر المسار الأقرب لمرحلة مشروعك.</p></div><div className="service-seo-links-grid"><a href="/services/digital-marketing">التسويق الرقمي <span>←</span></a><a href="/services/ecommerce">إنشاء متجر إلكتروني <span>←</span></a><a href="/services/campaign-management">إدارة الحملات الإعلانية <span>←</span></a><a href="/services/content-creation">صناعة المحتوى <span>←</span></a><a href="/services/seo">تحسين محركات البحث SEO <span>←</span></a><a href="/services/brand-identity">تصميم الهوية البصرية <span>←</span></a><a href="/services/visual-production">الإنتاج المرئي <span>←</span></a></div></section>
 
       <section id="ecommerce" className="creative-section ecommerce-section" ref={ecommerceSection.ref}>
         <div className="section-shell ecommerce-layout">
-          <div className="ecommerce-visual" style={{ opacity: ecommerceSection.visible ? 1 : 0, transform: ecommerceSection.visible ? "none" : "translateX(26px)", transition: "all 700ms cubic-bezier(0.23,1,0.32,1)" }}><div className="commerce-ring" /><img src={ECOMMERCE_IMG} alt="الشخصية السعودية جالسة وسط كراتين الشحن وتمسك هاتفاً يعرض متجراً إلكترونياً" loading="lazy" decoding="async" /><div className="commerce-float bag"><ShoppingBag size={17} /><span>Shopping Bag</span></div><div className="commerce-float order"><Bell size={16} /><span>طلب جديد</span></div><div className="commerce-float cart"><CreditCard size={16} /><span>Cart</span></div><div className="commerce-float sale"><TrendingUp size={16} /><span>Sales</span></div></div>
+          <div className="ecommerce-visual" style={{ opacity: ecommerceSection.visible ? 1 : 0, transform: ecommerceSection.visible ? "none" : "translateX(26px)", transition: "all 700ms cubic-bezier(0.23,1,0.32,1)" }}><div className="commerce-ring" /><img src={ECOMMERCE_IMG} alt="الشخصية السعودية جالسة وسط كراتين الشحن وتمسك هاتفاً يعرض متجراً إلكترونياً" loading="eager" decoding="async" /><div className="commerce-float bag"><ShoppingBag size={17} /><span>Shopping Bag</span></div><div className="commerce-float order"><Bell size={16} /><span>طلب جديد</span></div><div className="commerce-float cart"><CreditCard size={16} /><span>Cart</span></div><div className="commerce-float sale"><TrendingUp size={16} /><span>Sales</span></div></div>
           <Reveal visible={ecommerceSection.visible} className="section-copy">
             <div className="section-eyebrow">02 · التجارة الإلكترونية</div>
             <h2>متجرك مو بس<br /><span>واجهة حلوة.</span></h2>
@@ -235,7 +245,7 @@ export default function Home() {
             <div className="marketing-service-grid">{marketingServices.map((item, i) => <div key={item} className="marketing-service"><span>0{i + 1}</span><b>{item}</b></div>)}</div>
             <a href={whatsappHref("مرحباً، أرغب بخطة تسويق لعلامتي")} className="text-cta">كبّر حضورك <ArrowLeft size={16} /></a>
           </Reveal>
-          <div className="marketing-visual" style={{ opacity: marketingSection.visible ? 1 : 0, transform: marketingSection.visible ? "none" : "translateX(-24px)", transition: "all 700ms cubic-bezier(0.23,1,0.32,1) 120ms" }}><img src={MARKETING_IMG} alt="الشخصية السعودية تحمل مسجلاً قديماً Boombox" loading="lazy" decoding="async" /></div>
+          <div className="marketing-visual" style={{ opacity: marketingSection.visible ? 1 : 0, transform: marketingSection.visible ? "none" : "translateX(-24px)", transition: "all 700ms cubic-bezier(0.23,1,0.32,1) 120ms" }}><img src={MARKETING_IMG} alt="الشخصية السعودية تحمل مسجلاً قديماً Boombox" loading="eager" decoding="async" /></div>
         </div>
       </section>
 
@@ -247,10 +257,10 @@ export default function Home() {
             <p>نقيس ما يحدث فعلاً، ونترك النتائج المعتمدة تتحدث. هذه لوحة مختصرة من الأعمال والبيانات الظاهرة في مواد مُبتكر الحالية.</p>
             <div className="results-note"><BarChart3 size={20} /><span>المؤشرات المعروضة هنا مرتبطة بمادة العمل الحالية، وأي رقم جديد لا يُنشر قبل اعتماده.</span></div>
             <div className="results-metrics" aria-label="مؤشرات مختارة">{resultMetrics.map((metric) => <div className="result-metric" key={metric.label}><strong>{metric.value}</strong><span>{metric.unit}</span><b>{metric.label}</b><small>{metric.note}</small></div>)}</div>
-            <div className="payment-strip" aria-label="شعارات وسائل الدفع المستخدمة لدى المتاجر والبوابات المتصلة"><span className="payment-strip-label">خيارات دفع تدعمها المتاجر والبوابات المتصلة</span><div className="payment-brand-list">{paymentBrands.map((brand) => <span className={`payment-brand ${brand.className}`} key={brand.name} aria-label={brand.name}>{brand.mark}</span>)}</div></div>
+            <div className="payment-strip" aria-label="شعارات وسائل الدفع المستخدمة لدى المتاجر والبوابات المتصلة"><span className="payment-strip-label">خيارات الدفع والبوابات المتصلة</span><div className="payment-brand-list">{paymentBrands.map((brand) => <span className={`payment-brand ${brand.className}`} key={brand.name} aria-label={brand.name}><img src={brand.logo} alt={brand.name} loading="lazy" decoding="async" /></span>)}</div></div>
           </Reveal>
           <div className="results-visual" style={{ opacity: resultsSection.visible ? 1 : 0, transform: resultsSection.visible ? "none" : "translateX(-22px)", transition: "all 700ms cubic-bezier(0.23,1,0.32,1) 120ms" }}>
-            <img src={RESULTS_IMG} alt="الشخصية السعودية واقفة وتحمل جهازاً لوحياً لمتابعة النتائج" className="results-character" loading="lazy" decoding="async" />
+            <img src={RESULTS_IMG} alt="الشخصية السعودية واقفة وتحمل جهازاً لوحياً لمتابعة النتائج" className="results-character" loading="eager" decoding="async" />
                           <div className="results-work-strip" aria-label="أعمال مختارة">{caseStudies.map((work) => <div className="results-work" key={work.title}><img src={work.image} alt={`${work.title} - ${work.tag}`} loading="lazy" decoding="async" /><div><b>{work.title}</b><small>{work.tag}</small></div></div>)}</div>
 
           </div>
